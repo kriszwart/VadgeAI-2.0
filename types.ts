@@ -28,6 +28,13 @@ export interface TextStyle {
     width: number; // as a percentage of container width
 }
 
+export interface LogoOverlay {
+    id: string;
+    url: string; // data URL
+    position: { x: number; y: number }; // as percentages of center
+    size: number; // as a percentage of container width
+}
+
 export interface AdResult {
     id: string;
     product: string;
@@ -43,6 +50,7 @@ export interface AdResult {
     veoVideo?: VeoVideo;
     audioUrl?: string;
     textOverlays?: TextStyle[];
+    logo?: LogoOverlay;
     parentId?: string;
     sceneNumber?: number;
 }
